@@ -1,0 +1,2 @@
+Here are the link for torch: https://download.pytorch.org/whl/cu113/torch/
+Here is the link for torch_scatter, torch_sparse, torch_cluster: https://data.pyg.org/whl/

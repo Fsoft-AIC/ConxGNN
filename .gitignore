@@ -1,0 +1,8 @@
+*__pycache__
+.idea/
+model_checkpoints
+*wandb/
+data/meld_m3net/*
+runs/
+backup_dir/
+configs/*_testing

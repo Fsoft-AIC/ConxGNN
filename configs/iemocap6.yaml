@@ -1,0 +1,198 @@
+
+        C_modal_weighting: 0.8
+        CE_loss_param: 0.9500000000000001
+        HGR_loss_param:
+            - 0.1
+            - 1
+            - 0.05
+        InfoNCE_loss_param: 0.1
+        InfoNCE_temperature: 0.2
+        SWFC_loss_param: 0.85
+        add_graph_CEs: false
+        backup: null
+        batch_size: 16
+        ckpt_save_mode: wandb
+        class_weight: true
+        classi_loss: CE
+        classifier_type: multiemo
+        crossmodal_nheads: 2
+        cutoff_ratio: 0.2
+        data_dir: ./data/iemocap
+        dataset: iemocap
+        dataset_embedding_dims:
+            iemocap:
+                a: 100
+                t: 768
+                v: 512
+            iemocap_4:
+                a: 100
+                t: 768
+                v: 512
+            meld_m3net:
+                a: 300
+                t: 600
+                t1: 1024
+                t2: 1024
+                t3: 1024
+                t4: 1024
+                v: 342
+            mosei:
+                a: 80
+                t: 768
+                v: 35
+        device: cuda:0
+        devset_metadata:
+            batch_size: 16
+            dataset: iemocap
+            embedding_dim:
+                a: 100
+                t: 768
+                v: 512
+            emo_classes:
+                ang: 79
+                exc: 166
+                fru: 118
+                hap: 45
+                neu: 163
+                sad: 93
+            int_classes:
+                "0": 45
+                "1": 93
+                "2": 163
+                "3": 79
+                "4": 166
+                "5": 118
+            num_batches: 1
+            speaker_to_idx:
+                F: 1
+                M: 0
+            total_num_sentences: 664
+        drop_rate: 0.5
+        edge_type: temp_multi
+        emotion: null
+        encoder_nlayers: 2
+        epochs: 40
+        focus_param: 1.6
+        freeze_unimodal_after_pretraining: true
+        from_begin: true
+        gnn_block_num_layers: 2
+        gnn_block_trans_heads: 6
+        gnn_end_block_trans_heads: 4
+        gnn_model: GraphConv
+        gnn_num_block:
+            - 1
+            - 3
+            - 1
+        gnn_num_branch: 3
+        hidden_size: 128
+        hyper_end_trans_heads: 5
+        hyper_num_layers: 3
+        hyper_trans_heads: 1
+        inter_size: 1024
+        learning_rate: 0.0005
+        max_grad_value: -1
+        modal_weighting_loss_param: 0.4
+        modalities: atv
+        n_max_trial: 600
+        norm_mode: PN-SI
+        norm_scale: 1
+        norm_strategy: LN
+        num_crossmodal: 2
+        num_self_att: 3
+        optimizer: adam
+        pretrain_unimodal_epochs: 0
+        prj_name: ie6_cuong_9thang9_8h25
+        rnn: transformer
+        run: "124"
+        sa_ca_heads: 2
+        sample_weight_param: 0.99
+        scheduler: reduceLR
+        seed: 24
+        self_att_nheads: 2
+        temp_param: 0.8500000000000001
+        test_f1_thres: 0.67
+        testset_metadata:
+            batch_size: 16
+            dataset: iemocap
+            embedding_dim:
+                a: 100
+                t: 768
+                v: 512
+            emo_classes:
+                ang: 170
+                exc: 299
+                fru: 381
+                hap: 144
+                neu: 384
+                sad: 245
+            int_classes:
+                "0": 144
+                "1": 245
+                "2": 384
+                "3": 170
+                "4": 299
+                "5": 381
+            num_batches: 2
+            speaker_to_idx:
+                F: 1
+                M: 0
+            total_num_sentences: 1623
+        trainset_metadata:
+            batch_size: 16
+            dataset: iemocap
+            embedding_dim:
+                a: 100
+                t: 768
+                v: 512
+            emo_classes:
+                ang: 854
+                exc: 576
+                fru: 1350
+                hap: 459
+                neu: 1161
+                sad: 746
+            int_classes:
+                "0": 459
+                "1": 746
+                "2": 1161
+                "3": 854
+                "4": 576
+                "5": 1350
+            num_batches: 7
+            speaker_to_idx:
+                F: 1
+                M: 0
+            total_num_sentences: 5146
+        use_ca: true
+        use_contrastive_unimodal: false
+        use_crossmodal: false
+        use_custom_hyper: false
+        use_edge_weight_hetero: true
+        use_graph_transformer: true
+        use_hgr_loss: false
+        use_highway: false
+        use_hyper_attention: true
+        use_hyper_graph: true
+        use_modal_weighting: false
+        use_pair_norm: true
+        use_residual: true
+        use_sa: false
+        use_speaker: add
+        use_spkcen_hyperedge: false
+        wandb: false
+        watch_log_every_n_epoch: 10
+        weight_decay: 1.0e-08
+        wp:
+            - 3
+            - 11
+            - 1
+        wp_minus_wf: 1
+        wp_wf:
+            - 10
+            - 9
+            - 0
+            - 5
+            - 3
+            - 0
+            - 3
+            - 2

@@ -1,0 +1,233 @@
+
+        C_modal_weighting: 0.8
+        CE_loss_param: 0.35
+        HGR_loss_param:
+            - 0.1
+            - 1
+            - 0.05
+        InfoNCE_loss_param: 0.1
+        InfoNCE_temperature: 0.2
+        SWFC_loss_param: 1
+        backup: null
+        batch_size: 64
+        class_weight: true
+        classi_loss: Focal
+        classifier_type: multiemo
+        crossmodal_nheads: 2
+        cutoff_ratio: 0.2
+        data_dir: ./data/meld_m3net
+        dataset: meld_m3net
+        dataset_embedding_dims:
+            iemocap:
+                a: 100
+                t: 768
+                v: 512
+            iemocap_4:
+                a: 100
+                t: 768
+                v: 512
+            meld_m3net:
+                a: 300
+                t: 600
+                t1: 1024
+                t2: 1024
+                t3: 1024
+                t4: 1024
+                v: 342
+            mosei:
+                a: 80
+                t: 768
+                v: 35
+        device: cuda
+        devset_metadata:
+            batch_size: 64
+            dataset: meld_m3net
+            embedding_dim:
+                a: 300
+                t: 600
+                t1: 1024
+                t2: 1024
+                t3: 1024
+                t4: 1024
+                v: 342
+            emo_classes:
+                "0": 470
+                "1": 150
+                "2": 40
+                "3": 111
+                "4": 163
+                "5": 22
+                "6": 153
+            int_classes:
+                "0": 470
+                "1": 150
+                "2": 40
+                "3": 111
+                "4": 163
+                "5": 22
+                "6": 153
+            num_batches: 2
+            speaker_to_idx:
+                "0": 0
+                "1": 1
+                "2": 2
+                "3": 3
+                "4": 4
+                "5": 5
+                "6": 6
+                "7": 7
+                "8": 8
+            total_num_sentences: 1109
+        drop_rate: 0.8
+        edge_type: temp_multi
+        emotion: null
+        encoder_nlayers: 2
+        epochs: 2
+        focus_param: 1.3
+        freeze_unimodal_after_pretraining: true
+        from_begin: true
+        gnn_block_num_layers: 1
+        gnn_block_trans_heads: 5
+        gnn_end_block_trans_heads: 3
+        gnn_model: GraphConv
+        gnn_num_block:
+            - 1
+            - 3
+            - 1
+        gnn_num_branch: 3
+        hidden_size: 128
+        hyper_end_trans_heads: 1
+        hyper_num_layers: 3
+        hyper_trans_heads: 3
+        inter_size: 256
+        learning_rate: 0.00030000000000000003
+        max_grad_value: -1
+        modal_weighting_loss_param: 0.4
+        modalities: atv
+        n_max_trial: 300
+        norm_mode: PN-SI
+        norm_scale: 1
+        norm_strategy: LN
+        num_crossmodal: 2
+        num_self_att: 3
+        optimizer: adam
+        pretrain_unimodal_epochs: 0
+        prj_name: meld_m3net_4thang9
+        rnn: transformer
+        run: "23"
+        sa_ca_heads: 2
+        sample_weight_param: 0.999
+        scheduler: reduceLR
+        seed: 24
+        self_att_nheads: 2
+        temp_param: 1
+        testset_metadata:
+            batch_size: 64
+            dataset: meld_m3net
+            embedding_dim:
+                a: 300
+                t: 600
+                t1: 1024
+                t2: 1024
+                t3: 1024
+                t4: 1024
+                v: 342
+            emo_classes:
+                "0": 1256
+                "1": 281
+                "2": 50
+                "3": 208
+                "4": 402
+                "5": 68
+                "6": 345
+            int_classes:
+                "0": 1256
+                "1": 281
+                "2": 50
+                "3": 208
+                "4": 402
+                "5": 68
+                "6": 345
+            num_batches: 5
+            speaker_to_idx:
+                "0": 0
+                "1": 1
+                "2": 2
+                "3": 3
+                "4": 4
+                "5": 5
+                "6": 6
+                "7": 7
+                "8": 8
+            total_num_sentences: 2610
+        trainset_metadata:
+            batch_size: 64
+            dataset: meld_m3net
+            embedding_dim:
+                a: 300
+                t: 600
+                t1: 1024
+                t2: 1024
+                t3: 1024
+                t4: 1024
+                v: 342
+            emo_classes:
+                "0": 4710
+                "1": 1205
+                "2": 268
+                "3": 683
+                "4": 1743
+                "5": 271
+                "6": 1109
+            int_classes:
+                "0": 4710
+                "1": 1205
+                "2": 268
+                "3": 683
+                "4": 1743
+                "5": 271
+                "6": 1109
+            num_batches: 17
+            speaker_to_idx:
+                "0": 0
+                "1": 1
+                "2": 2
+                "3": 3
+                "4": 4
+                "5": 5
+                "6": 6
+                "7": 7
+                "8": 8
+            total_num_sentences: 9989
+        use_ca: false
+        use_contrastive_unimodal: false
+        use_crossmodal: false
+        use_custom_hyper: false
+        use_edge_weight_hetero: true
+        use_graph_transformer: true
+        use_hgr_loss: false
+        use_highway: false
+        use_hyper_attention: true
+        use_hyper_graph: true
+        use_modal_weighting: false
+        use_pair_norm: true
+        use_residual: true
+        use_sa: false
+        use_speaker: add
+        wandb: false
+        watch_log_every_n_epoch: 20
+        weight_decay: 1.0e-08
+        wp:
+            - 3
+            - 11
+            - 1
+        wp_minus_wf: 3
+        wp_wf:
+            - 6
+            - 4
+            - 0
+            - 11
+            - 11
+            - 0
+            - 7
+            - 4
