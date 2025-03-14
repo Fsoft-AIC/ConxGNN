@@ -41,13 +41,14 @@ Part of the code is borrowed from the following repositories. We would like to t
 ## Citation
 If you find this work helpful, please consider citing our paper:
 ```bibtex
-@misc{van2024effectivecontextmodelingframework,
-      title={Effective Context Modeling Framework for Emotion Recognition in Conversations}, 
-      author={Cuong Tran Van and Thanh V. T. Tran and Van Nguyen and Truong Son Hy},
-      year={2024},
-      eprint={2412.16444},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2412.16444}, 
-}
+@INPROCEEDINGS{10888112,
+  author={Van, Cuong Tran and Tran, Thanh V. T. and Nguyen, Van and Hy, Truong Son},
+  booktitle={ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Effective Context Modeling Framework for Emotion Recognition in Conversations}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Emotion recognition;Attention mechanisms;Limiting;Speech recognition;Oral communication;Benchmark testing;Graph neural networks;Data models;Speech processing;Context modeling;Emotion Recognition in Conversations;Graph Neural Network;Hypergraph;Multimodal},
+  doi={10.1109/ICASSP49660.2025.10888112}}
 ```
